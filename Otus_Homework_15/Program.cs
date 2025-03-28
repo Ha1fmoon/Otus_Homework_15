@@ -29,7 +29,7 @@ internal class Program
         Console.WriteLine(GetProductById(1));
 
         Console.WriteLine("Full order query (Homework 14, product ID = 1):");
-        Console.WriteLine(GetOrdersByProductIdWithAdultCustomers(1));
+        Console.WriteLine(GetOrdersByCustomQuery(1));
     }
 
     private static string? GetCustomers()
@@ -81,7 +81,7 @@ internal class Program
         return product?.ToString();
     }
 
-    private static string? GetOrdersByProductIdWithAdultCustomers(int productId)
+    private static string? GetOrdersByCustomQuery(int productId)
     {
         var orders = FullOrderRepository.GetOrdersByProductId(productId).ToList();
 
