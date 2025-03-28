@@ -1,6 +1,10 @@
-﻿namespace Otus_Homework_15;
+﻿namespace Otus_Homework_15.Models;
 
-public class Product
+public record Product : ICustomRecord
 {
-    
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public int StockQuantity { get; set; }
+    public int Price { get; set; }
 }

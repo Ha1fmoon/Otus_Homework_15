@@ -2,5 +2,12 @@
 
 public class Config
 {
-    
+    public static string SqlConnectionString =
+        """
+            User ID=postgres;
+            Password=postgres;
+            Host=localhost;
+            Port=32768;
+            Database=store;
+        """;
 }

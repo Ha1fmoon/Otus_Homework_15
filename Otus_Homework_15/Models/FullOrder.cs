@@ -1,6 +1,6 @@
 ﻿namespace Otus_Homework_15.Models;
 
-public class OrderFull
+public record FullOrder : ICustomRecord
 {
     public int CustomerID { get; set; }
     public string FirstName { get; set; }

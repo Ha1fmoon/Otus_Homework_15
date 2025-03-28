@@ -1,9 +1,10 @@
 ﻿using Dapper;
 using Npgsql;
+using Otus_Homework_15.Models;
 
-namespace Otus_Homework_15;
+namespace Otus_Homework_15.Repositories;
 
-public class CustomerRepository
+public class CustomersRepository
 {
     public static IEnumerable<Customer> GetCustomers()
     {
@@ -17,7 +18,7 @@ public class CustomerRepository
                                      age AS Age 
                                  FROM customers 
                                  """;
-            
+
             return connection.Query<Customer>(query);
         }
     }
@@ -35,7 +36,7 @@ public class CustomerRepository
                                  FROM customers
                                  WHERE id = @id
                                  """;
-            
+
             return connection.QueryFirstOrDefault<Customer>(query, new { id });
         }
     }
@@ -53,7 +54,7 @@ public class CustomerRepository
                                  FROM customers
                                  WHERE first_name LIKE '%' || @namePart || '%' OR last_name LIKE '%' || @namePart || '%'
                                  """;
-            
+
             return connection.Query<Customer>(query, new { namePart });
         }
     }

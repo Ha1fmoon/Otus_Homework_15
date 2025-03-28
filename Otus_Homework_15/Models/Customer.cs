@@ -1,6 +1,6 @@
-﻿namespace Otus_Homework_15;
+﻿namespace Otus_Homework_15.Models;
 
-public class Customer
+public record Customer : ICustomRecord
 {
     public int Id { get; set; }
     public string FirstName { get; set; }
