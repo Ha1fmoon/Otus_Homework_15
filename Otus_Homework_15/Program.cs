@@ -13,6 +13,7 @@ internal class Program
         Console.WriteLine(GetCustomers());
         Console.WriteLine("2. Get customer by ID = 1:");
         Console.WriteLine(GetCustomerById(1));
+        Console.WriteLine();
         Console.WriteLine("3. Get customers by name part (search string = 'ва'):");
         Console.WriteLine(GetCustomersByNamePart("ва"));
 
@@ -27,6 +28,7 @@ internal class Program
         Console.WriteLine(GetProductList());
         Console.WriteLine("2. Get product by ID = 1:");
         Console.WriteLine(GetProductById(1));
+        Console.WriteLine();
 
         Console.WriteLine("Full order query (Homework 14, product ID = 1):");
         Console.WriteLine(GetOrdersByCustomQuery(1));
